@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>canvas</title>
+         <style>
+            canvas {
+                border: 4px solid #bada55;
+            }
+        </style>
+    </head>
+
+    <body>
+     <canvas width="500" height="500">test </canvas>
+
+
+     <script>
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+
+        //LA TETE
+        (function drawcircle() {
+            ctx.fillStyle = "yellow";
+            ctx.beginPath();
+            ctx.arc(200, 200, 90, 0, Math.PI*2, false);
+            ctx.fill();
+        })();
+
+
+
+        //BOUCHE
+        (function bouche (){
+            ctx.moveTo(200+40, 230); 
+            ctx.arc(200, 230,40, 0, Math.PI, false);
+            ctx.strokeStyle = "white";
+            ctx.stroke();
+        })();
+
+       
+
+
+
+     </script>
+    </body>
+</html>
